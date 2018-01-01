@@ -1,8 +1,11 @@
 ip = input("Please enter an IP address: ")
 
+if ip[-1] != '.':
+    ip += '.'
+    
 segment = 1
 segmentLength = 0
-char = ''
+# char = ''
 
 for char in ip:
     if char == '.':
@@ -13,5 +16,5 @@ for char in ip:
     else:
         segmentLength += 1
 
-if char != '.':
-        print("Segment {} contains {} characters.".format(segment, segmentLength))
+# if char != '.':
+#         print("Segment {} contains {} characters.".format(segment, segmentLength))
